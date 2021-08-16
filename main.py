@@ -5,10 +5,10 @@ import youtube_dl
 
 #Cofigurar los sigueintes parametros:
 #-----------------------------------------------
-USERNAME = "nombre.apellido"  # Moodle nombre de usuario
-PASSWORD = "contraseña"  # Moodle contarseña
-MATERIA = 'Arquitectura-de-computadores' #Nombre de la materia
-REC_URL = 'https://udearroba.udea.edu.co/internos/mod/recordingszoom/recordingsdrive.php?id=882603' #Enlace donde estan las grabaciones
+USERNAME = "nombre.apellido"  #Moodle nombre de usuario
+PASSWORD = "contraseña"  #Moodle contraseña
+MATERIA = 'Modelos-de-sistemas' #Nombre de la materia
+REC_URL = 'https://udearroba.udea.edu.co/internos/mod/recordingszoom/recordinglist.php?id=878111' #Enlace donde estan las grabaciones
 #-----------------------------------------------
 
 BASE_URL = "https://udearroba.udea.edu.co/internos/my"
@@ -18,8 +18,8 @@ wd = webdriver.Firefox() #Abrir el navegador
 
 wd.get(LOGIN_URL)
 time.sleep(2)
-wd.find_element_by_id('').send_keys(USERNAME)
-wd.find_element_by_id('').send_keys(PASSWORD)
+wd.find_element_by_id('username').send_keys(USERNAME)
+wd.find_element_by_id('password').send_keys(PASSWORD)
 wd.find_element_by_id('loginbtn').click()
 wd.get(REC_URL)
 time.sleep(2)
